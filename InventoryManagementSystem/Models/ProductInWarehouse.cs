@@ -14,6 +14,7 @@ namespace InventoryManagementSystem.Models
         public int ProductId { get; set; }
         public int WarehouseId { get; set; }
         public int Quantity { get; set; }
+        public DateTime EntryDate { get; set; }
         public DateTime ProductionDate { get; set; }
         public DateTime ExpiryDate { get; set; }
         public Product Product { get; set; }
