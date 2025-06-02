@@ -56,10 +56,11 @@ namespace InventoryManagementSystem.Controllers
         {
             return _context.supplyPermitProducts.ToList();
         }
-        public SupplyPermitProduct GetSupplyPermitProductById(int id)
+        public SupplyPermitProduct GetSupplyPermitProductById(int permitId, int productId)
         {
-            return _context.supplyPermitProducts.Find(id);
+            return _context.supplyPermitProducts.Find(permitId, productId);
         }
+
         public void UpdateSupplyPermitProduct(SupplyPermitProduct supplyPermitProduct)
         {
             if (supplyPermitProduct == null)
@@ -67,9 +68,9 @@ namespace InventoryManagementSystem.Controllers
             _context.supplyPermitProducts.Update(supplyPermitProduct);
             _context.SaveChanges();
         }
-        public void DeleteSupplyPermitProduct(int id)
+        public void DeleteSupplyPermitProduct(int permitId, int productId)
         {
-            var supplyPermitProduct = _context.supplyPermitProducts.Find(id);
+            var supplyPermitProduct = _context.supplyPermitProducts.Find(permitId, productId);
             if (supplyPermitProduct != null)
             {
                 _context.supplyPermitProducts.Remove(supplyPermitProduct);

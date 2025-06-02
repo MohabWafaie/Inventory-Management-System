@@ -164,11 +164,11 @@ namespace InventoryManagementSystem.UserControllers
                     int quantity = (int)numericUpDown.Value;
 
                     // Find ProductionDate picker control by naming convention: dtProduction_5
-                    var prodPicker = panel1.Controls.Find("dtProduction_" + productId, false).FirstOrDefault() as DateTimePicker;
+                    var prodPicker = panel1.Controls.Find("dtpProduction_" + productId, false).FirstOrDefault() as DateTimePicker;
                     if (prodPicker != null) productionDate = prodPicker.Value;
 
                     // Find ExpiryDate picker control by naming convention: dtExpiry_5
-                    var expiryPicker = panel1.Controls.Find("dtExpiry_" + productId, false).FirstOrDefault() as DateTimePicker;
+                    var expiryPicker = panel1.Controls.Find("dtpExpiry_" + productId, false).FirstOrDefault() as DateTimePicker;
                     if (expiryPicker != null) expiryDate = expiryPicker.Value;
 
                     // Add the tuple to list

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace InventoryManagementSystem.Controllers
 {
@@ -28,7 +30,10 @@ namespace InventoryManagementSystem.Controllers
         }
         public List<ProductMovement> GetProductMovements()
         {
-            return _context.ProductMovements.ToList();
+            return _context.ProductMovements
+                .Include(pm => pm.Warehouse)
+                .Include(pm => pm.Product)
+                .ToList();
         }
         public ProductMovement GetProductMovementById(int id)
         {

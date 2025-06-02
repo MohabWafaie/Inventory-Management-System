@@ -38,8 +38,20 @@
             button3 = new Button();
             button4 = new Button();
             panel1 = new Panel();
+            button10 = new Button();
+            button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
             button5 = new Button();
             userControl51 = new InventoryManagementSystem.UserControllers.UserControl5();
+            userControl61 = new InventoryManagementSystem.UserControllers.UserControl6();
+            userControl71 = new InventoryManagementSystem.UserControllers.UserControl7();
+            userControl81 = new InventoryManagementSystem.UserControllers.UserControl8();
+            userControl91 = new InventoryManagementSystem.UserControllers.UserControl9();
+            userControl101 = new InventoryManagementSystem.UserControllers.UserControl10();
+            userControl111 = new InventoryManagementSystem.UserControllers.UserControl11();
+            button11 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -124,6 +136,12 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(button11);
+            panel1.Controls.Add(button10);
+            panel1.Controls.Add(button9);
+            panel1.Controls.Add(button8);
+            panel1.Controls.Add(button7);
+            panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
@@ -132,8 +150,61 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(230, 577);
+            panel1.Size = new Size(230, 636);
             panel1.TabIndex = 0;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(12, 508);
+            button10.Name = "button10";
+            button10.Size = new Size(199, 34);
+            button10.TabIndex = 9;
+            button10.Text = "Product Aging Report";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // button9
+            // 
+            button9.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button9.Location = new Point(0, 458);
+            button9.Name = "button9";
+            button9.Size = new Size(222, 34);
+            button9.TabIndex = 8;
+            button9.Text = "Product Movements Report";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button8
+            // 
+            button8.BackgroundImageLayout = ImageLayout.Zoom;
+            button8.Cursor = Cursors.SizeAll;
+            button8.Location = new Point(18, 407);
+            button8.Name = "button8";
+            button8.Size = new Size(178, 34);
+            button8.TabIndex = 7;
+            button8.Text = "Products Report";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(12, 358);
+            button7.Name = "button7";
+            button7.Size = new Size(184, 34);
+            button7.TabIndex = 6;
+            button7.Text = "Warehouses Report";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(3, 302);
+            button6.Name = "button6";
+            button6.Size = new Size(215, 34);
+            button6.TabIndex = 5;
+            button6.Text = "Make a Withdraw Permit";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -152,11 +223,69 @@
             userControl51.Size = new Size(1470, 750);
             userControl51.TabIndex = 6;
             // 
+            // userControl61
+            // 
+            userControl61.Location = new Point(224, 0);
+            userControl61.Name = "userControl61";
+            userControl61.Size = new Size(1470, 934);
+            userControl61.TabIndex = 7;
+            // 
+            // userControl71
+            // 
+            userControl71.Location = new Point(224, 0);
+            userControl71.Name = "userControl71";
+            userControl71.Size = new Size(1472, 752);
+            userControl71.TabIndex = 8;
+            // 
+            // userControl81
+            // 
+            userControl81.Location = new Point(224, 0);
+            userControl81.Name = "userControl81";
+            userControl81.Size = new Size(1472, 756);
+            userControl81.TabIndex = 9;
+            // 
+            // userControl91
+            // 
+            userControl91.Location = new Point(224, 0);
+            userControl91.Name = "userControl91";
+            userControl91.Size = new Size(1472, 750);
+            userControl91.TabIndex = 10;
+            // 
+            // userControl101
+            // 
+            userControl101.Location = new Point(224, 0);
+            userControl101.Name = "userControl101";
+            userControl101.Size = new Size(1467, 748);
+            userControl101.TabIndex = 11;
+            // 
+            // userControl111
+            // 
+            userControl111.Location = new Point(224, 0);
+            userControl111.Name = "userControl111";
+            userControl111.Size = new Size(988, 646);
+            userControl111.TabIndex = 12;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(9, 558);
+            button11.Name = "button11";
+            button11.Size = new Size(209, 32);
+            button11.TabIndex = 10;
+            button11.Text = "Near Expiry Date Report";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 577);
+            ClientSize = new Size(1200, 636);
+            Controls.Add(userControl111);
+            Controls.Add(userControl101);
+            Controls.Add(userControl91);
+            Controls.Add(userControl81);
+            Controls.Add(userControl71);
+            Controls.Add(userControl61);
             Controls.Add(userControl51);
             Controls.Add(userControl41);
             Controls.Add(userControl31);
@@ -184,5 +313,17 @@
         private Panel panel1;
         private Button button5;
         private UserControllers.UserControl5 userControl51;
+        private Button button6;
+        private UserControllers.UserControl6 userControl61;
+        private Button button7;
+        private UserControllers.UserControl7 userControl71;
+        private Button button8;
+        private UserControllers.UserControl8 userControl81;
+        private Button button9;
+        private UserControllers.UserControl9 userControl91;
+        private Button button10;
+        private UserControllers.UserControl10 userControl101;
+        private Button button11;
+        private UserControllers.UserControl11 userControl111;
     }
 }
