@@ -28,41 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            button1 = new Button();
             label1 = new Label();
             userControl11 = new UserControl1();
             userControl21 = new InventoryManagementSystem.UserControllers.UserControl2();
             userControl31 = new InventoryManagementSystem.UserControllers.UserControl3();
             userControl41 = new InventoryManagementSystem.UserControllers.UserControl4();
+            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            panel1 = new Panel();
+            button5 = new Button();
+            userControl51 = new InventoryManagementSystem.UserControllers.UserControl5();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ButtonShadow;
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(230, 489);
-            panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(42, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Products";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -97,14 +76,24 @@
             // 
             // userControl41
             // 
-            userControl41.Location = new Point(224, 3);
+            userControl41.Location = new Point(224, -11);
             userControl41.Name = "userControl41";
             userControl41.Size = new Size(1470, 750);
             userControl41.TabIndex = 5;
             // 
+            // button1
+            // 
+            button1.Location = new Point(42, 87);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 34);
+            button1.TabIndex = 0;
+            button1.Text = "Products";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // button2
             // 
-            button2.Location = new Point(42, 82);
+            button2.Location = new Point(42, 35);
             button2.Name = "button2";
             button2.Size = new Size(123, 34);
             button2.TabIndex = 1;
@@ -132,11 +121,43 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(230, 577);
+            panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(12, 243);
+            button5.Name = "button5";
+            button5.Size = new Size(200, 34);
+            button5.TabIndex = 4;
+            button5.Text = "Make a Supply Permit";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // userControl51
+            // 
+            userControl51.Location = new Point(224, 0);
+            userControl51.Name = "userControl51";
+            userControl51.Size = new Size(1470, 750);
+            userControl51.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 489);
+            ClientSize = new Size(1200, 577);
+            Controls.Add(userControl51);
             Controls.Add(userControl41);
             Controls.Add(userControl31);
             Controls.Add(userControl21);
@@ -151,16 +172,17 @@
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button1;
         private Label label1;
         private UserControl1 userControl11;
         private UserControllers.UserControl2 userControl21;
         private UserControllers.UserControl3 userControl31;
         private UserControllers.UserControl4 userControl41;
-        private Button button4;
-        private Button button3;
+        private Button button1;
         private Button button2;
+        private Button button3;
+        private Button button4;
+        private Panel panel1;
+        private Button button5;
+        private UserControllers.UserControl5 userControl51;
     }
 }

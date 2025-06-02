@@ -13,6 +13,7 @@ namespace InventoryManagementSystem
             userControl21.Hide();
             userControl31.Hide();
             userControl41.Hide();
+            userControl51.Hide();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,12 @@ namespace InventoryManagementSystem
         {
             hideAllUserControls();
             userControl41.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            hideAllUserControls();
+            userControl51.Show();
         }
     }
 }

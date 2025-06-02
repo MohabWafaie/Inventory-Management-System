@@ -19,12 +19,14 @@ namespace InventoryManagementSystem.Data
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductInWarehouse> productInWarehouses { get; set; }
+        public DbSet<ProductMovement> ProductMovements { get; set; }
         public DbSet<SupplyPermit> SupplyPermits { get; set; }
         public DbSet<SupplyPermitProduct> supplyPermitProducts { get; set; }
         public DbSet<TransferPermit> TransferPermits { get; set; }
         public DbSet<TransferPermitProduct> transferPermitProducts { get; set; }
         public DbSet<WithdrawPermit> WithdrawPermits { get; set; }
         public DbSet<WithdrawPermitProduct> WithdrawPermitProducts { get; set; }
+        public object ProductsInWarehouses { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
