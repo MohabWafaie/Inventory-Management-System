@@ -40,6 +40,8 @@
             panel1 = new Panel();
             button5 = new Button();
             userControl51 = new InventoryManagementSystem.UserControllers.UserControl5();
+            userControl61 = new InventoryManagementSystem.UserControllers.UserControl6();
+            button6 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -124,6 +126,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
@@ -132,7 +135,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(230, 577);
+            panel1.Size = new Size(230, 636);
             panel1.TabIndex = 0;
             // 
             // button5
@@ -152,11 +155,29 @@
             userControl51.Size = new Size(1470, 750);
             userControl51.TabIndex = 6;
             // 
+            // userControl61
+            // 
+            userControl61.Location = new Point(224, 0);
+            userControl61.Name = "userControl61";
+            userControl61.Size = new Size(1470, 934);
+            userControl61.TabIndex = 7;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(3, 292);
+            button6.Name = "button6";
+            button6.Size = new Size(215, 34);
+            button6.TabIndex = 5;
+            button6.Text = "Make a Withdraw Permit";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 577);
+            ClientSize = new Size(1200, 636);
+            Controls.Add(userControl61);
             Controls.Add(userControl51);
             Controls.Add(userControl41);
             Controls.Add(userControl31);
@@ -184,5 +205,7 @@
         private Panel panel1;
         private Button button5;
         private UserControllers.UserControl5 userControl51;
+        private Button button6;
+        private UserControllers.UserControl6 userControl61;
     }
 }

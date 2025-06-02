@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
+using static InventoryManagementSystem.UserControllers.UserControl6;
+
 
 namespace InventoryManagementSystem.Controllers
 {
@@ -28,7 +31,9 @@ namespace InventoryManagementSystem.Controllers
         }
         public List<ProductInWarehouse> GetAllProductsInWarehouse()
         {
-            return _context.productInWarehouses.ToList();
+            return _context.productInWarehouses
+                .Include(p => p.Product)
+                .ToList();
         }
         public ProductInWarehouse GetProductInWarehouseById(int id)
         {
@@ -38,14 +43,7 @@ namespace InventoryManagementSystem.Controllers
         {
             if (productInWarehouse == null)
                 throw new ArgumentNullException(nameof(productInWarehouse));
-            if (productInWarehouse.Quantity == 0)
-            {
-                DeleteProductInWarehouse(productInWarehouse.StockId);
-            }
-            else
-            {
-                _context.productInWarehouses.Update(productInWarehouse);
-            }
+            _context.productInWarehouses.Update(productInWarehouse);
             _context.SaveChanges();
         }
         public void DeleteProductInWarehouse(int id)
@@ -56,6 +54,27 @@ namespace InventoryManagementSystem.Controllers
                 _context.productInWarehouses.Remove(productInWarehouse);
                 _context.SaveChanges();
             }
+        }
+        public List<ProductDisplayItem> GetProductsWithTotalQuantity()
+        {
+            var productsInWarehouses = _context.productInWarehouses
+                .Include(p => p.Product)
+                .ToList();
+
+            var groupedProducts = productsInWarehouses
+                .Where(p => p.Product != null)
+                .GroupBy(p => new { p.ProductId, p.Product.Name, p.WarehouseId })
+                .Select(g => new ProductDisplayItem
+                {
+                    ProductID = g.Key.ProductId,
+                    WarehouseId = g.Key.WarehouseId,
+                    Display = $"{g.Key.Name} - {g.Sum(p => p.Quantity)} in stock",
+                    TotalQuantity = g.Sum(p => p.Quantity)
+                })
+                .OrderByDescending(p => p.TotalQuantity)
+                .ToList();
+
+            return groupedProducts;
         }
     }
 }
