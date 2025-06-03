@@ -35,11 +35,6 @@ namespace InventoryManagementSystem.UserControllers
 
             var products = productController.GetAllProducts();
 
-            //checkedListBox1.Items.Clear();
-            //checkedListBox1.DataSource = products;
-            //checkedListBox1.DisplayMember = "Display";  // Shows product.Name in the list
-            //checkedListBox1.ValueMember = "ProductID"; // Optional, for identification
-
             var Clients = cc.GetAllClients();
             comboBox1.DataSource = Clients;
             comboBox1.DisplayMember = "Name";    // Property to show in the list
