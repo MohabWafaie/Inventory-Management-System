@@ -1,5 +1,12 @@
 # 🏪 Inventory Management System
 
+![Inventory Management System](https://img.shields.io/badge/Windows%20Forms-.NET-blue?style=for-the-badge)
+![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-green?style=for-the-badge)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Backend-red?style=for-the-badge)
+![Made at ITI](https://img.shields.io/badge/Made%20at-ITI%20Alexandria-orange?style=for-the-badge)
+
+> 🏫 This project was developed as part of the **Entity Framework & Visual C# course** at **ITI Alexandria**.
+
 An Inventory Management System built with **Windows Forms** and **Entity Framework Core** to manage warehouse operations including supply, withdrawal, and transfer of products. The system also supports product movement tracking, reporting functionalities, and monitoring warehouse stock levels with detailed reports.
 
 ---
@@ -158,4 +165,15 @@ InventoryManagementSystem/
 
 This project is licensed under the **MIT License**.  
 Feel free to use and adapt it for your own projects.
-```
+
+---
+
+## 📩 Contact
+
+Feel free to reach out for feedback, improvements, or collaborations!
+
+📧 Email: [mohab.wafaie@gmail.com](mailto:mohab.wafaie@gmail.com)
+
+---
+
+Made with ❤️ by **Mohab Wafaie** as part of the **ITI Alexandria Visual C# and Entity Frameword Course**.
